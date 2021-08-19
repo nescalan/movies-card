@@ -1,8 +1,7 @@
-@import url(https://fonts.googleapis.com/css?family=Lato:400,300,700);
-@import url(https://fonts.googleapis.com/css?family=Rubik:400,900);
-
 * {
   box-sizing: border-box;
+  /* margin: 0;
+  padding: 0; */
 }
 body,
 html {
@@ -16,12 +15,13 @@ body {
   font-family: "Lato", Sans-serif;
 }
 #card_container {
-  width: 700px;
-  height: 350px;
+  /* width: 700px; */
+  width: 400px;
+  height: 750px;
   position: absolute;
-  top: 50%;
+  /* top: 50%;
   left: 50%;
-  margin: -175px 0 0 -350px;
+  margin: -175px 0 0 -350px; */
 }
 #card {
   animation: backAn 50s infinite;
@@ -31,9 +31,10 @@ body {
   height: 100%;
   position: absolute;
   z-index: 1;
-  background: url(https://riverbeats.life/neworleans/wp-content/uploads/2018/07/Atlantis.png)
-    100% bottom;
-  /*background:url(http://riccardotartaglia.it/img/deadpool/back.jpg) 100% bottom;*/
+  /* background: url(https://riverbeats.life/neworleans/wp-content/uploads/2018/07/Atlantis.png)
+    100% bottom; */
+  background: url(http://riccardotartaglia.it/img/deadpool/back.jpg) 100% bottom
+    no-repeat;
   /*box-shadow:0px 45px 100px rgba(0, 0, 0, 0.4), inset 0 0 0 1000px rgba(156, 27, 27, 0.6);*/
   box-shadow: 0px 45px 100px rgba(0, 0, 0, 0.4),
     inset 0 0 0 1000px rgba(0, 76, 86, 0.6);
@@ -45,7 +46,7 @@ body {
 }
 #card .text-block h1 {
   font-family: "Rubik", Sans-serif;
-  font-size: 3em;
+  font-size: 2em;
   margin: 0;
   text-transform: uppercase;
   font-weight: 700;
@@ -113,5 +114,22 @@ button {
   }
   100% {
     background-size: 100%;
+  }
+}
+/* 
+=====================================
+            MEDIA QUERIES 
+===================================== 
+ */
+
+@media (min-width: 700px) {
+  #card_container {
+    border: 1px solid red;
+    width: 700px;
+    height: 350px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -175px 0 0 -350px;
   }
 }

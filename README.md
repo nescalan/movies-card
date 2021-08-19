@@ -1,6 +1,6 @@
 # Movies card
 
-Primer reto del JavaScript Challenge de la escuela en linea Platzi.com
+Agosto19, 2021: Primer reto del JavaScript Challenge de la escuela en linea Platzi.com
 
 ## Descripcion
 
