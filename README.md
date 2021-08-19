@@ -1,2 +1,2 @@
-# fundamentos-node-platzi
-Curso de fundamentos de NodeJS en Platzi
+# movies card
+comparador de boletos de cine vs. suscripciones a servicios de streaming) para que comparemos nuestras soluciones este viernes durante la clase en vivo 
