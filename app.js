@@ -11,6 +11,11 @@ const resultado = () => {
 
   const span = document.querySelector("span");
 
+  // Validación de los checkbox
+  if (document.querySelector("#netflix").checked) {
+    alert("Usted selecionó netflix");
+  }
+
   //   Calculos matemáticos
   const totalCine = cine * entrada;
   alert(totalCine);
