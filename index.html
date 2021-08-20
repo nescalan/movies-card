@@ -32,22 +32,62 @@
           </p>
           <hr />
           <form class="form">
-            <label for="peliculas"
-              >¿Cuántas películas ves al mes en el cine?</label
-            >
-            <input type="text" name="peliculas" id="peliculas" /><br />
-            <label for="peliculas">¿Cuál es el precio de cada entrada?</label>
-            <input type="text" name="peliculas" id="peliculas" />
-            <label for="plataformas">¿Cuáles plataformas estás pagando?</label>
+            <label for="cine">¿Cuántas películas ves al mes en el cine?</label>
+            <input
+              id="cine"
+              class="form-input"
+              name="peliculas"
+              minlength="1"
+              maxlength="2"
+              pattern="[0-9]+"
+              title="Ingrese solamente números"
+              required
+            />
+            <br />
+            <label for="entrada">¿Cuál es el precio de cada entrada?</label>
+            <input
+              required
+              id="entrada"
+              class="form-input"
+              name="peliculas"
+              minlength="1"
+              maxlength="6"
+              pattern="[0-9],?.?+"
+              title="No es necesario ingresar el símbolo de la moneda"
+            />
             <div class="plataformas">
-              <input type="checkbox" name="netflix" id="netflix" />Netflix
-              <input type="checkbox" name="amazon" id="amazon" />Amazon
-              <input type="checkbox" name="disney" id="disney" />Disney +
+              <fieldset>
+                <legend>Servicios Streaming Activos</legend>
+                <div class="streaming">
+                  <input
+                    id="netflix"
+                    type="checkbox"
+                    name="netflix"
+                    value="8.99"
+                  />
+                  <label for="netflix">Netflix <sup>($8.99)</sup></label>
+                </div>
+                <div class="streaming">
+                  <input
+                    id="amazon"
+                    type="checkbox"
+                    name="amazon"
+                    value="8.99"
+                  />
+                  <label for="amazon">Amazon + <sup>($8.99)</sup></label>
+                </div>
+                <div class="streaming">
+                  <input id="disney" type="checkbox" name="disney" />
+                  <label for="disney">Disney + <sup>($8.99)</sup></label>
+                </div>
+              </fieldset>
             </div>
-            <button>Submit</button>
+            <span></span>
+            <button onclick="resultado()" type="button">Submit</button>
           </form>
         </div>
       </div>
     </div>
+    <script src="./app.js"></script>
   </body>
 </html>
