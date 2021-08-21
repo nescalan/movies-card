@@ -11,6 +11,11 @@ const resultado = () => {
   const entrada = document.querySelector("#entrada").value;
   const span = document.querySelector("span");
 
+  // Validacion del SPAN
+  if (span != null) {
+    span.innerHTML = "";
+  }
+
   // Validación de los NETFLIX
   if (document.querySelector("#netflix").checked) {
     netflix = Number.parseFloat(document.querySelector("#netflix").value);
@@ -41,7 +46,12 @@ const resultado = () => {
   const totalCine = cine * entrada;
   if (totalCine > totalStreaming) {
     const newTextNode = document.createTextNode(
-      `El total de las entradas de cine es: ${totalCine}`
+      `Es mas caro ir al cine -> ${totalCine}`
+    );
+    span.appendChild(newTextNode);
+  } else {
+    const newTextNode = document.createTextNode(
+      `Es mejor estar en casa -> ${totalStreaming}`
     );
     span.appendChild(newTextNode);
   }
