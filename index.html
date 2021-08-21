@@ -30,7 +30,7 @@
             Nuestro servicios le permite comparar sus gastos de cine con las
             peliculas que disfruta desde las aplicaciones de "Streaming".
           </p>
-          <hr />
+          <!-- <hr /> -->
           <form class="form">
             <label for="cine">¿Cuántas películas ves al mes en el cine?</label>
             <input
@@ -54,6 +54,7 @@
               maxlength="6"
               pattern="[0-9],?.?+"
               title="No es necesario ingresar el símbolo de la moneda"
+              placeholder="Dolares Americanos"
             />
             <div class="plataformas">
               <fieldset>
@@ -77,7 +78,12 @@
                   <label for="amazon">Amazon + <sup>($8.99)</sup></label>
                 </div>
                 <div class="streaming">
-                  <input id="disney" type="checkbox" name="disney" />
+                  <input
+                    id="disney"
+                    type="checkbox"
+                    name="disney"
+                    value="8.99"
+                  />
                   <label for="disney">Disney + <sup>($8.99)</sup></label>
                 </div>
               </fieldset>

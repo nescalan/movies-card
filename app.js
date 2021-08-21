@@ -2,26 +2,49 @@
 const resultado = () => {
   const boton = document.querySelector("button");
 
+  // Declaracion de variables
+  let netflix, amazon, disney;
+  let totalStreaming = 0;
+
   // Manipulando el DOM
   const cine = document.querySelector("#cine").value;
   const entrada = document.querySelector("#entrada").value;
-  const netflix = document.querySelector("#netflix").value;
-  const amazon = document.querySelector("#amazon").value;
-  const disney = document.querySelector("#disney").value;
-
   const span = document.querySelector("span");
 
-  // Validación de los checkbox
+  // Validación de los NETFLIX
   if (document.querySelector("#netflix").checked) {
-    alert("Usted selecionó netflix");
+    netflix = Number.parseFloat(document.querySelector("#netflix").value);
+    totalStreaming += netflix;
+  } else {
+    netflix = 0;
+    totalStreaming += netflix;
   }
 
+  // Validación de los AMAZON
+  if (document.querySelector("#amazon").checked) {
+    amazon = Number.parseFloat(document.querySelector("#amazon").value);
+    totalStreaming += amazon;
+  } else {
+    amazon = 0;
+    totalStreaming += amazon;
+  }
+
+  // Validación de los DISNEY
+  if (document.querySelector("#disney").checked) {
+    disney = Number.parseFloat(document.querySelector("#disney").value);
+    totalStreaming += disney;
+  } else {
+    disney = 0;
+    totalStreaming += disney;
+  }
   //   Calculos matemáticos
   const totalCine = cine * entrada;
-  alert(totalCine);
-
-  const newTextNode = document.createTextNode(
-    "El total del cine es: " + totalCine
-  );
-  span.appendChild(newTextNode);
+  if (totalCine > totalStreaming) {
+    const newTextNode = document.createTextNode(
+      `El total de las entradas de cine es: ${totalCine}`
+    );
+    span.appendChild(newTextNode);
+  }
+  console.log(`El total de las entradas de cine es: ${totalCine}`);
+  console.log(`Streaming: ${totalStreaming}`);
 };
