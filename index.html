@@ -32,28 +32,39 @@
           </p>
           <!-- <hr /> -->
           <form class="form">
+            <input
+              type="text"
+              name="nombre"
+              placeholder="Su nombre de usuario"
+              minlength="5"
+              maxlength="40"
+              required
+              pattern="[0-9]+"
+            />
             <label for="cine">¿Cuántas películas ves al mes en el cine?</label>
             <input
               id="cine"
               class="form-input"
               name="peliculas"
+              type="text"
+              required
+              pattern="[0-9]*"
               minlength="1"
               maxlength="2"
-              pattern="[0-9]+"
               title="Ingrese solamente números"
-              required
             />
             <br />
             <label for="entrada">¿Cuál es el precio de cada entrada?</label>
             <input
-              required
               id="entrada"
               class="form-input"
               name="peliculas"
+              type="text"
+              pattern="[0-9]{6}"
               minlength="1"
-              maxlength="6"
               title="No es necesario ingresar el símbolo de la moneda"
               placeholder="Dolares Americanos"
+              required
             />
             <div class="plataformas">
               <fieldset>

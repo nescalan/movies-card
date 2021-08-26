@@ -173,6 +173,12 @@ button {
   #card_container .pg > img {
     height: 600px;
   }
+  #card .form .plataformas fieldset {
+    border: 2px solid white;
+    display: flex;
+    justify-content: space-around;
+  }
+
   @keyframes backAn {
     0% {
       background-size: 175%;

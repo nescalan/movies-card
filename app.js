@@ -1,14 +1,14 @@
 // boton.addEventListener("click", botonOnClick);
 const resultado = () => {
-  const boton = document.querySelector("button");
+  // const boton = document.querySelector("button");
 
   // Declaracion de variables
   let netflix, amazon, disney;
   let totalStreaming = 0;
 
   // Manipulando el DOM
-  const cine = document.querySelector("#cine").value;
-  const entrada = document.querySelector("#entrada").value;
+  const cine = parseFloat(document.querySelector("#cine").value);
+  const entrada = parseFloat(document.querySelector("#entrada").value);
   const span = document.querySelector("span");
 
   // Validacion del SPAN
@@ -16,8 +16,13 @@ const resultado = () => {
     span.innerHTML = "";
   }
 
-  // Validación de los NETFLIX
+  // Validacion de los campos cine y entradas
+  if (cine != [0 - 9]) {
+    alert("instertar numeros");
+  }
+
   if (document.querySelector("#netflix").checked) {
+    // Validación de los NETFLIX
     netflix = Number.parseFloat(document.querySelector("#netflix").value);
     totalStreaming += netflix;
   } else {
